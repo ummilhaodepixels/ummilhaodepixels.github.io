@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Um Milhão de Pixels",
-  description: "A publicidade mais barata do Brasil!",
+  description: "A vitrine publicitária mais barata do Brasil 🇧🇷",
 };
 
 export default function RootLayout({
