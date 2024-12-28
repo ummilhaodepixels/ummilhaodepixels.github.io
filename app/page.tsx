@@ -19,7 +19,7 @@ function PixelEmpty() {
 
 export default function Home() {
 
-  const rows = Array.from(Array(100000).keys()).map((row, rowIndex) => {
+  const rows = Array.from(Array(100).keys()).map((row, rowIndex) => {
     const brand = BRANDS.find(coItem => coItem.pixels.includes(row))
       if (brand) {
         return <PixelBrought key={rowIndex} {...brand} />
@@ -29,7 +29,7 @@ export default function Home() {
   })
 
   return (
-    <main className="mx-20 mb-10 min-h-screen">
+    <main className="mx-5 md:mx-20 mb-10 min-h-screen">
       <header className="flex flex-row justify-between py-10 items-center">
         <div>
           <Image src="logo.png" width={200} height={100} alt="um milhão de pixels"/>
