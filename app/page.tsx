@@ -19,7 +19,7 @@ function PixelEmpty() {
 
 export default function Home() {
 
-  const rows = Array.from(Array(1000000).keys()).map((row, rowIndex) => {
+  const rows = Array.from(Array(10000).keys()).map((row, rowIndex) => {
     const brand = BRANDS.find(coItem => coItem.pixels.includes(row))
       if (brand) {
         return <PixelBrought key={rowIndex} {...brand} />
