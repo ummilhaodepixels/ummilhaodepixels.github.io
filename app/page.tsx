@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <main className="mx-5 md:mx-20 mb-10 min-h-screen">
-      <header className="flex flex-row justify-between py-10 items-center">
+      <header className="flex flex-col gap-10 md:gap-0 md:flex-row mx-auto justify-between py-10 items-center">
         <div>
           <Image src="logo.png" width={200} height={100} alt="um milhão de pixels"/>
         </div>
@@ -42,11 +42,13 @@ export default function Home() {
             Anuncie sua marca por apenas R$ 1 💰
           </h2>
         </div>
-        <div>
-          <a href="/tst" className="bg-slate-900 text-white font-bold text-sm px-6 py-4 rounded-lg shadow-md hover:bg-slate-700">
-            Quero Anunciar
-          </a>
-        </div>
+        <a 
+          href="http://wa.me/5521988793123?text=Quero anunciar no ummilhaodepixels.com.br" 
+          target="_blank" 
+          className="bg-slate-900 text-white font-bold text-sm px-6 py-4 w-full text-center md:w-48 rounded-lg shadow-md hover:bg-slate-700"
+        >
+          Quero Anunciar
+        </a>
       </header>
       <div className="flex gap-2" style={{flexWrap: "wrap"}}>
         {rows}
