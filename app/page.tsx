@@ -1,11 +1,31 @@
-import { BRANDS } from "@/app/consts"
-import Image from "next/image"
+"use client"
 
-function PixelBrought({ link, logo, headline }: { link: string, logo: string, headline: string }) {
+import { BRANDS } from "@/app/consts"
+import clsx from "clsx"
+import Image from "next/image"
+import { useState } from "react"
+
+function PixelBrought({ name, link, logo, headline }: { name:string, link: string, logo: string, headline: string }) {
+  const [showTip, setShowTip] = useState(false)
+
   return (
-    <div>
-      <a href={link} target="_blank">
-        <Image src={logo} alt={headline} width={20} height={20}/>
+    <div
+      className="relative"
+      onMouseEnter={() => setShowTip(true)}
+      onMouseLeave={() => setShowTip(false)}
+    >
+      <div
+        className={clsx(
+          "absolute top-6 bg-black border text-white border-slate-300 rounded-md shadow-lg",
+          { block: showTip, hidden: !showTip }
+        )}
+      >
+        <p className="break-keep w-max text-xs font-black p-2">
+          {name} | {headline}
+        </p>
+      </div>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <Image src={logo} alt={headline} width={20} height={20} />
       </a>
     </div>
   )
