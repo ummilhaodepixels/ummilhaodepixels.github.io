@@ -70,7 +70,7 @@ export default function Home() {
           Quero Anunciar
         </a>
       </header>
-      <div className="flex gap-2" style={{flexWrap: "wrap"}}>
+      <div className="flex flex-wrap gap-2 mx-auto" >
         {rows}
       </div>
     </main>
