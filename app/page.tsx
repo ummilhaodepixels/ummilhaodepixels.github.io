@@ -55,9 +55,12 @@ export default function Home() {
           <Image src="logo.png" width={200} height={100} alt="um milhão de pixels"/>
         </div>
         <div className="text-center">
-          <h1 className="text-lg font-bold text-slate-800 uppercase">
-            A vitrine publicitária mais barata do Brasil 🇧🇷
-          </h1>
+          <div className="flex gap-2 items-center">
+            <h1 className="text-lg font-bold text-slate-800 uppercase">
+              A vitrine publicitária mais barata do Brasil
+            </h1>
+            <Image src="flagbr.png" width={25} height={15} alt="Brasil" />
+          </div>
           <h2 className="text-sm font-thin">
             Anuncie sua marca por apenas R$ 1 💰
           </h2>
