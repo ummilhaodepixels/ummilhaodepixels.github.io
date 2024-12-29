@@ -1,12 +1,23 @@
-"use client"
+"use client";
 
-import { BRANDS } from "@/app/consts"
-import clsx from "clsx"
-import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react";
+import { BRANDS } from "@/app/consts";
+import Image from "next/image";
+import clsx from "clsx";
+import Header from "@/components/header";
 
-function PixelBrought({ name, link, logo, headline }: { name:string, link: string, logo: string, headline: string }) {
-  const [showTip, setShowTip] = useState(false)
+function PixelBrought({
+  name,
+  link,
+  logo,
+  headline,
+}: {
+  name: string;
+  link: string;
+  logo: string;
+  headline: string;
+}) {
+  const [showTip, setShowTip] = useState(false);
 
   return (
     <div
@@ -16,7 +27,7 @@ function PixelBrought({ name, link, logo, headline }: { name:string, link: strin
     >
       <div
         className={clsx(
-          "absolute top-6 bg-black border text-white border-slate-300 rounded-md shadow-lg",
+          "absolute top-6 bg-black border text-white border-slate-50 rounded-md shadow-lg",
           { block: showTip, hidden: !showTip }
         )}
       >
@@ -28,53 +39,87 @@ function PixelBrought({ name, link, logo, headline }: { name:string, link: strin
         <Image src={logo} alt={headline} width={20} height={20} />
       </a>
     </div>
-  )
+  );
 }
 
 function PixelEmpty() {
   return (
-    <div className="h-5 w-5 bg-slate-200 border-dotted border-2 border-slate-300 rounded-sm" />
-  )
+    <div className="h-5 w-5 bg-slate-200 border-dotted border-2 border-slate-50 rounded-sm" />
+  );
 }
 
 export default function Home() {
+  const [visibleBlocks, setVisibleBlocks] = useState(1); // Blocos visíveis
+  const [isLoading, setIsLoading] = useState(false); // Estado de loading
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const rows = Array.from(Array(10000).keys()).map((row, rowIndex) => {
-    const brand = BRANDS.find(coItem => coItem.pixels.includes(row))
-      if (brand) {
-        return <PixelBrought key={rowIndex} {...brand} />
-      } else {
-        return <PixelEmpty key={rowIndex} />
-      }
-  })
+  const PIXELS_PER_BLOCK = 10000; // Quantidade de pixels por bloco
+  const TOTAL_PIXELS = 1_000_000; // Total de pixels
+  const CACHE_KEY = "visible_blocks"; // Chave para armazenar no localStorage
+  const MAX_CACHE_BLOCKS = 5; // Número máximo de blocos no cache (200 mil pixels)
+
+  // Recupera o progresso salvo no localStorage ao carregar a página
+  useEffect(() => {
+    const savedBlocks = localStorage.getItem(CACHE_KEY);
+    if (savedBlocks) {
+      setVisibleBlocks(Math.min(Number(savedBlocks), MAX_CACHE_BLOCKS)); // Respeita o limite
+    }
+  }, []);
+
+  // Atualiza o progresso no localStorage sempre que novos blocos forem carregados
+  useEffect(() => {
+    if (visibleBlocks <= MAX_CACHE_BLOCKS) {
+      localStorage.setItem(CACHE_KEY, String(visibleBlocks)); // Salva apenas até o limite
+    }
+  }, [visibleBlocks]);
+
+  // Detecta se o usuário está no fim da lista para carregar mais blocos
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isLoading) {
+          setIsLoading(true); // Ativa o loading
+          setTimeout(() => {
+            setVisibleBlocks((prev) =>
+              Math.min(prev + 1, TOTAL_PIXELS / PIXELS_PER_BLOCK)
+            );
+            setIsLoading(false); // Desativa o loading
+          }, 500); // Simula o tempo de carregamento
+        }
+      },
+      { rootMargin: "100px" }
+    );
+
+    if (containerRef.current) observer.observe(containerRef.current);
+
+    return () => observer.disconnect();
+  }, [isLoading]);
+
+  // Renderiza os pixels (com ou sem brand)
+  const rows = Array.from({ length: visibleBlocks * PIXELS_PER_BLOCK }, (_, i) => {
+    const brand = BRANDS.find((brand) => brand.pixels.includes(i));
+    if (brand) {
+      return <PixelBrought key={i} {...brand} />;
+    } else {
+      return <PixelEmpty key={i} />;
+    }
+  });
 
   return (
     <main className="mx-5 md:mx-20 mb-10 min-h-screen">
-      <header className="flex flex-col gap-10 md:gap-0 md:flex-row mx-auto justify-between py-10 items-center">
-        <div>
-          <Image src="logo.png" width={200} height={100} alt="um milhão de pixels"/>
-        </div>
-        <div className="text-center">
-          <div className="flex gap-2 items-center">
-            <h1 className="text-lg font-bold text-slate-800 uppercase">
-              A vitrine publicitária mais barata do Brasil
-            </h1>
-            <Image src="flagbr.png" width={25} height={15} alt="Brasil" />
-          </div>
-          <h2 className="text-sm font-thin">
-            Anuncie sua marca por apenas R$ 1 💰
-          </h2>
-        </div>
-        <a 
-          href="http://wa.me/5521988793123?text=Quero anunciar no ummilhaodepixels.com.br" 
-          target="_blank" 
-          className="bg-slate-900 text-white font-bold text-sm px-6 py-4 w-full text-center md:w-48 rounded-lg shadow-md hover:bg-slate-700"
-        >
-          Quero Anunciar
-        </a>
-      </header>
-      <div className="flex flex-wrap gap-2 mx-auto" >
+      <Header />
+      <div
+        className="flex"
+        style={{ flexWrap: "wrap", justifyContent: "center" }}
+      >
         {rows}
+      </div>
+      {/* Placeholder para carregar mais pixels */}
+      <div
+        ref={containerRef}
+        className="h-10 w-full flex justify-center items-center text-sm font-bold text-gray-500"
+      >
+        {isLoading && "Carregando..."}
       </div>
     </main>
   );
