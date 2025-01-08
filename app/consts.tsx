@@ -131,5 +131,12 @@ export const BRANDS = [
         headline: "Soluções Ambientais",
         link: "http://wa.me/5569984483035",
         pixels: [18]
+    },
+    {
+        name: "Luar Espaço Infantil",
+        logo: "/brands/luarespacoinfantil.jpg",
+        headline: "Terapia Ocupacional",
+        link: "https://www.instagram.com/luar.espacoinfantil?igsh=MWNlb2F3eWFmdTk0cA==",
+        pixels: [19]
     }
 ]
