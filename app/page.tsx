@@ -20,25 +20,25 @@ function PixelBrought({
   const [showTip, setShowTip] = useState(false);
 
   return (
-    <div
-      className="relative"
-      onMouseEnter={() => setShowTip(true)}
-      onMouseLeave={() => setShowTip(false)}
-    >
+    <a href={link} target="_blank" rel="noopener noreferrer">
       <div
-        className={clsx(
-          "absolute top-6 bg-black border text-white border-slate-50 rounded-md shadow-lg",
-          { block: showTip, hidden: !showTip }
-        )}
+        className="relative min-w-5 min-h-5 my-auto"
+        onMouseEnter={() => setShowTip(true)}
+        onMouseLeave={() => setShowTip(false)}
       >
-        <p className="break-keep w-max text-xs font-black p-2">
-          {name} | {headline}
-        </p>
+        <div
+          className={clsx(
+            "absolute top-6 bg-black border text-white border-slate-50 rounded-md shadow-lg",
+            { block: showTip, hidden: !showTip }
+          )}
+        >
+          <p className="break-keep w-max text-xs font-black p-2">
+            {name} | {headline}
+          </p>
+        </div>
+          <Image src={logo} alt={headline} width={20} height={20} />
       </div>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <Image src={logo} alt={headline} width={20} height={20} />
-      </a>
-    </div>
+    </a>
   );
 }
 
