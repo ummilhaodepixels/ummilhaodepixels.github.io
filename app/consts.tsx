@@ -57,4 +57,16 @@ export const BRANDS = [{
     headline: "o astro do momento",
     link: "https://www.instagram.com/viniremela/",
     pixels: [8]
+},{
+    name: "Mimo",
+    logo: "/brands/mimo.png",
+    headline: "⚠️ este gato não está à venda, apenas para fins de apreciação de sua beleza!",
+    link: "https://www.instagram.com/belotibordado/",
+    pixels: [9]
+},{
+    name: "belo(ti)bordado",
+    logo: "/brands/belotibordado.png",
+    headline: "dou vida em linha e bordado para personagens geek e outras coisas ;p",
+    link: "https://www.instagram.com/belotibordado/",
+    pixels: [10]
 }]
