@@ -45,4 +45,16 @@ export const BRANDS = [{
     headline: "Artesanato em crochê, feitos por encomenda e algumas coisinhas a pronta entrega 🥰",
     link: "https://www.instagram.com/croc.artesanato/",
     pixels: [6]
+},{
+    name: "VIRALATA PRODUÇÕES",
+    logo: "/brands/viralata-prod.png",
+    headline: "🐶 festa de música eletrônica diferenciada 🐶",
+    link: "https://www.instagram.com/viralataprod/",
+    pixels: [7]
+},{
+    name: "viniREMELA",
+    logo: "/brands/viniremela.png",
+    headline: "o astro do momento",
+    link: "https://www.instagram.com/viniremela/",
+    pixels: [8]
 }]
