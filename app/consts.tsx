@@ -110,5 +110,12 @@ export const BRANDS = [
         headline: "Seu resumo diário de notícias",
         link: "https://bhaovivo.com.br/",
         pixels: [15]
+    },
+    {
+        name: "Centro de Treinamento Instituo Maria Auxiliadora (CT IMA)",
+        logo: "/brands/ctima.jpeg",
+        headline: "Esporte & qualidade de vida",
+        link: "https://www.instagram.com/ct.imapvh?igsh=MWpjZjFoMW9iN2wyZg==",
+        pixels: [16]
     }
 ]
