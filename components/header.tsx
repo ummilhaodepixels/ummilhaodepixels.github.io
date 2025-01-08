@@ -11,7 +11,7 @@ export default function Header() {
           A vitrine publicitária mais barata do Brasil 🇧🇷
         </h1>
         <h2 className="text-sm font-thin">
-          Anuncie sua marca por apenas R$ 1 💰
+          Divulgue sua marca por apenas R$ 1 💰
         </h2>
       </div>
       <a
