@@ -134,7 +134,7 @@ export const BRANDS = [
     },
     {
         name: "Luar Espaço Infantil",
-        logo: "/brands/luarespacoinfantil.jpg",
+        logo: "/brands/luarespacoinfantil.png",
         headline: "Terapia Ocupacional",
         link: "https://www.instagram.com/luar.espacoinfantil?igsh=MWNlb2F3eWFmdTk0cA==",
         pixels: [19]
