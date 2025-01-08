@@ -39,4 +39,10 @@ export const BRANDS = [{
     headline: "Presentear é dar forma ao amor",
     link: "https://www.instagram.com/cabana_criativa/",
     pixels: [5]
+},{
+    name: "Croc Artesanato",
+    logo: "/brands/croc.jpg",
+    headline: "Artesanato em crochê, feitos por encomenda e algumas coisinhas a pronta entrega 🥰",
+    link: "https://www.instagram.com/croc.artesanato/",
+    pixels: [6]
 }]
