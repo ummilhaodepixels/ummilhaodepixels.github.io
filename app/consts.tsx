@@ -32,4 +32,11 @@ export const BRANDS = [{
     headline: "Neograde | Sites, E-commerces e Aplicativos",
     link: "https://www.instagram.com/neograde.tech/",
     pixels: [4]
+},
+{
+    name: "Cabana criativa",
+    logo: "/brands/cabana-criativa.png",
+    headline: "Presentear é dar forma ao amor",
+    link: "https://www.instagram.com/cabana_criativa/",
+    pixels: [5]
 }]
