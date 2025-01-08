@@ -25,4 +25,11 @@ export const BRANDS = [{
     headline: "Feita para a deusa que habita em você 🪽",
     link: "https://www.instagram.com/oly.modaintima/",
     pixels: [3]
+},
+{
+    name: "Neograde",
+    logo: "/brands/neograde.jpg",
+    headline: "Neograde | Sites, E-commerces e Aplicativos",
+    link: "https://www.instagram.com/neograde.tech/",
+    pixels: [4]
 }]
