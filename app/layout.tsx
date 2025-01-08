@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics, MicrosoftClarity } from "@/components/tracking";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Um Milhão de Pixels",
   description: "A vitrine publicitária mais barata do Brasil 🇧🇷",
+  keywords: "Publicidade, Marketing, Branding",
+  openGraph: {
+    images: '/public/meta.png'
+  }
 };
 
 export default function RootLayout({
@@ -24,6 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html className="light" lang="pt-BR">
+      <GoogleAnalytics />
+      <MicrosoftClarity />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
