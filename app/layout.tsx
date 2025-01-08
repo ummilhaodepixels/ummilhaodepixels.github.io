@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "A vitrine publicitária mais barata do Brasil 🇧🇷",
   keywords: "Publicidade, Marketing, Branding",
   openGraph: {
-    images: '/public/meta.png'
+    images: 'https://ummilhaodepixels.com.br/public/meta.png'
   }
 };
 
