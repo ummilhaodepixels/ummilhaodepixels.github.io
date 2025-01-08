@@ -29,7 +29,7 @@ export const BRANDS = [{
 {
     name: "Neograde",
     logo: "/brands/neograde.jpg",
-    headline: "Neograde | Sites, E-commerces e Aplicativos",
+    headline: "Sites, E-commerces e Aplicativos",
     link: "https://www.instagram.com/neograde.tech/",
     pixels: [4]
 },
