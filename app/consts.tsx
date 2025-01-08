@@ -117,5 +117,19 @@ export const BRANDS = [
         headline: "Esporte & qualidade de vida",
         link: "https://www.instagram.com/ct.imapvh?igsh=MWpjZjFoMW9iN2wyZg==",
         pixels: [16]
+    },
+    {
+        name: "Central F.C.",
+        logo: "/brands/centralfc.png",
+        headline: "Central Desportivo: Amantes do esporte",
+        link: "https://www.instagram.com/central.fc.pvh?igsh=bGg0Z3p3a3V6em9k",
+        pixels: [17]
+    },
+    {
+        name: "Eco+",
+        logo: "/brands/eco.jpg",
+        headline: "Soluções Ambientais",
+        link: "http://wa.me/5569984483035",
+        pixels: [18]
     }
 ]
