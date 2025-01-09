@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function IGButton() {
   return (
-    <div className="fixed w-full h-full flex flex-wrap-reverse flex-row pl-4 pb-4">
+    <div className="fixed flex flex-wrap-reverse flex-row pl-4 pb-4" style={{bottom: '1px'}}>
       <a
         href="https://instagram.com/ummilhaodepixels"
         target="_blank"
