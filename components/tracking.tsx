@@ -3,13 +3,9 @@ import Script from "next/script";
 
 const GOOGLE_ANALYTICS_ID = "G-P4HEQ2GG77";
 const MICROSOFT_CLARITY_ID = "pqpvzne6t0";
-const PRODUCTION_URL = "ummilhaodepixels.com.br";
 
 function isProduction() {
-  if (typeof window !== "undefined") {
-    return window.location.hostname === PRODUCTION_URL;
-  }
-  return false;
+  return process.env.NODE_ENV === "production"
 }
 
 export function GoogleAnalytics() {
