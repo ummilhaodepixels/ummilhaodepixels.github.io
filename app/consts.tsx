@@ -152,5 +152,12 @@ export const BRANDS = [
         headline: "Promotora de créditos",
         link: "https://www.instagram.com/dlconsultoriaoficial?igsh=MWZybzdmY3JtZTRzYg%3D%3D&utm_source=qr",
         pixels: [20]
+    },
+    {
+        name: "itsabiker",
+        logo: "/brands/itsabiker.jpeg",
+        headline: "Ex-sedentario, computeiro, nortista e ciclista entusiasta",
+        link: "https://www.youtube.com/@itsabiker",
+        pixels: [21]
     }
 ]
