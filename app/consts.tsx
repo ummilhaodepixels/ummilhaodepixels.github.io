@@ -188,4 +188,11 @@ export const BRANDS = [
         link: "https://api.whatsapp.com/send/?phone=%2B5569981147878&text&type=phone_number&app_absent=0&wame_ctl=1",
         pixels: [36]
     },
+    {
+        name: "tatuagensdofecchio",
+        logo: "/brands/tatuagensdofecchio.webp",
+        headline: "Blackwork Autoral",
+        link: "linktr.ee/fecchio",
+        pixels: [37]
+    },
 ]
