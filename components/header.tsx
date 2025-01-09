@@ -15,7 +15,7 @@ export default function Header() {
         </h2>
       </div>
       <a
-        href="http://wa.me/5521988793123?text=Quero anunciar no ummilhaodepixels.com.br"
+        href="https://wa.me/5521988793123?text=Quero anunciar no ummilhaodepixels.com.br"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-slate-900 text-white font-bold text-sm px-6 py-4 w-full text-center md:w-48 rounded-lg shadow-md hover:bg-slate-700"
