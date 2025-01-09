@@ -167,4 +167,11 @@ export const BRANDS = [
         link: "https://www.instagram.com/desapego_da_gia",
         pixels: [23]
     },
+    {
+        name: "Volpi Café",
+        logo: "/brands/volpicafe.webp",
+        headline: "Forte no sabor, suave no rolê ☕😎",
+        link: "https://www.instagram.com/volpi.cafe",
+        pixels: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+    },
 ]
