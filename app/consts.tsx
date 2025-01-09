@@ -148,7 +148,7 @@ export const BRANDS = [
     // },
     {
         name: "DL Consultoria & Consórcios",
-        logo: "/brands/dlconsultoria.png",
+        logo: "/brands/dlconsultoria.jpeg",
         headline: "Promotora de créditos",
         link: "https://www.instagram.com/dlconsultoriaoficial?igsh=MWZybzdmY3JtZTRzYg%3D%3D&utm_source=qr",
         pixels: [20]
