@@ -202,4 +202,11 @@ export const BRANDS = [
         link: "https://www.instagram.com/zoghbiimoveis/",
         pixels: [38]
     },
+    {
+        name: "Ricci Burger's",
+        logo: "/brands/ricciburgers.webp",
+        headline: "Artesanal Food 🍔",
+        link: "https://www.instagram.com/ricci_burgers/",
+        pixels: Array.from({ length: 101 }, (_, i) => 39 + i)
+    }
 ]
