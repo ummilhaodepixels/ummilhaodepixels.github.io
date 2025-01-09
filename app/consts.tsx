@@ -174,4 +174,18 @@ export const BRANDS = [
         link: "https://www.instagram.com/volpi.cafe",
         pixels: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
     },
+    {
+        name: "Jorge Mallet da elevatte",
+        logo: "/brands/jorgemallet.webp",
+        headline: "Ensino profissionais de tecnologia a conquistarem cargos estratégicos com salários de R$ 25k+ em até 60 dias",
+        link: "https://elevatte.me/mentoria/?utm_source=instagram&utm_medium=social&utm_campaign=ummilhaodepixels",
+        pixels: [35]
+    },
+    {
+        name: "Prof. Brilhante",
+        logo: "/brands/profbrilhante.webp",
+        headline: "Desde 2013 ajudando alunos a desmistificarem as exatas",
+        link: "https://api.whatsapp.com/send/?phone=%2B5569981147878&text&type=phone_number&app_absent=0&wame_ctl=1",
+        pixels: [36]
+    },
 ]
