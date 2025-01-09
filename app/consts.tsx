@@ -195,4 +195,11 @@ export const BRANDS = [
         link: "linktr.ee/fecchio",
         pixels: [37]
     },
+    {
+        name: "Zoghbi Imóveis",
+        logo: "/brands/Zoghbi.webp",
+        headline: "🤩 Há 20 anos cuidando do seu patrimônio",
+        link: "https://www.instagram.com/zoghbiimoveis/",
+        pixels: [38]
+    },
 ]
