@@ -139,13 +139,6 @@ export const BRANDS = [
         link: "https://www.instagram.com/luar.espacoinfantil?igsh=MWNlb2F3eWFmdTk0cA==",
         pixels: [19]
     },
-    // {
-    //     name: "Marcelo Régis | In Foco",
-    //     logo: "/brands/marceloregis.png",
-    //     headline: "Ininterrupto, desde 1999.",
-    //     link: "https://www.instagram.com/marceloregisoficial/",
-    //     pixels: [20]
-    // },
     {
         name: "DL Consultoria & Consórcios",
         logo: "/brands/dlconsultoria.jpeg",
@@ -159,5 +152,12 @@ export const BRANDS = [
         headline: "Ex-sedentario, computeiro, nortista e ciclista entusiasta",
         link: "https://www.youtube.com/@itsabiker",
         pixels: [21]
-    }
+    },
+    {
+        name: "Marcelo Régis | In Foco",
+        logo: "/brands/marceloregis.png",
+        headline: "Ininterrupto, desde 1999.",
+        link: "https://www.instagram.com/marceloregisoficial/",
+        pixels: [22]
+    },
 ]
