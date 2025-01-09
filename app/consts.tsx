@@ -160,4 +160,11 @@ export const BRANDS = [
         link: "https://www.instagram.com/marceloregisoficial/",
         pixels: [22]
     },
+    {
+        name: "Desapego da Gia",
+        logo: "/brands/desapegodagia.webp",
+        headline: "Brechó & Outlet em Porto Velho, Rondônia",
+        link: "https://www.instagram.com/desapego_da_gia",
+        pixels: [23]
+    },
 ]
