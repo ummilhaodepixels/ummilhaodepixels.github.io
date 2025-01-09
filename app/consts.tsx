@@ -138,5 +138,19 @@ export const BRANDS = [
         headline: "Terapia Ocupacional",
         link: "https://www.instagram.com/luar.espacoinfantil?igsh=MWNlb2F3eWFmdTk0cA==",
         pixels: [19]
+    },
+    // {
+    //     name: "Marcelo Régis | In Foco",
+    //     logo: "/brands/marceloregis.png",
+    //     headline: "Ininterrupto, desde 1999.",
+    //     link: "https://www.instagram.com/marceloregisoficial/",
+    //     pixels: [20]
+    // },
+    {
+        name: "DL Consultoria & Consórcios",
+        logo: "/brands/dlconsultoria.png",
+        headline: "Promotora de créditos",
+        link: "https://www.instagram.com/dlconsultoriaoficial?igsh=MWZybzdmY3JtZTRzYg%3D%3D&utm_source=qr",
+        pixels: [20]
     }
 ]
