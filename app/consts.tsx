@@ -274,5 +274,23 @@ export const BRANDS: Array<{
     headline: "Evento musical em Porto Velho, RO",
     link: "https://www.instagram.com/newjunglewave",
     pixel: 35
+  },
+  {
+    name: "MP",
+    logo: "/brands/mp.jpeg",
+    headline: "Identidade, concepção, arquitetura interiores",
+    link: "https://www.instagram.com/mariabarros.arquitetura/",
+    pixel: 36,
+    rows: 4,
+    columns: 4
+  },
+  {
+    name: "BREEZE FOOD 🌿",
+    logo: "/brands/breezefood.jpeg",
+    headline: "Identidade, concepção, arquitetura interiores",
+    link: "https://www.instagram.com/breeze.food/",
+    pixel: 37,
+    rows: 4,
+    columns: 4
   }
 ];
