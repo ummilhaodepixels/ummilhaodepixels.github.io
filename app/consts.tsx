@@ -262,10 +262,17 @@ export const BRANDS: Array<{
     columns: 3
   },
   {
-      name: "Construtora Martins",
-      logo: "/brands/construtoramartins.png",
-      headline: "Pilares de confiança em cada projeto!",
-      link: "https://www.instagram.com/martins_const?igsh=a3JrM2V3OWZ4Z2g1",
-      pixel: 34
-    }
+    name: "Construtora Martins",
+    logo: "/brands/construtoramartins.png",
+    headline: "Pilares de confiança em cada projeto!",
+    link: "https://www.instagram.com/martins_const?igsh=a3JrM2V3OWZ4Z2g1",
+    pixel: 34
+  },
+  {
+    name: "New Jungle Wave VI",
+    logo: "/brands/newjunglewave5.jpg",
+    headline: "Evento musical em Porto Velho, RO",
+    link: "https://www.instagram.com/newjunglewave",
+    pixel: 35
+  }
 ];
