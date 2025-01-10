@@ -253,12 +253,19 @@ export const BRANDS: Array<{
     pixel: 32
   },
   {
-  name: "shininja96",
+    name: "shininja96",
     logo: "/brands/shininja96.webp",
     headline: "Streamer",
     link: "https://twitch.tv/shininja96",
     pixel: 33,
     rows: 3,
     columns: 3
-  }
+  },
+  {
+      name: "Construtora Martins",
+      logo: "/brands/construtoramartins.png",
+      headline: "Pilares de confiança em cada projeto!",
+      link: "https://www.instagram.com/martins_const?igsh=a3JrM2V3OWZ4Z2g1",
+      pixel: 34
+    }
 ];
