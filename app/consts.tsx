@@ -208,7 +208,7 @@ export const BRANDS: Array<{
     name: "tatuagensdofecchio",
     logo: "/brands/tatuagensdofecchio.webp",
     headline: "Blackwork Autoral",
-    link: "linktr.ee/fecchio",
+    link: "https://linktr.ee/fecchio",
     pixel: 27,
   },
   {
