@@ -9,6 +9,7 @@ export default function PixelBrought({
   headline,
   rows,
   columns,
+  bg
 }: {
   name: string;
   link: string;
@@ -16,6 +17,7 @@ export default function PixelBrought({
   headline: string;
   rows: number;
   columns: number;
+  bg: string;
 }) {
   const [showTip, setShowTip] = useState(false);
 
@@ -41,6 +43,7 @@ export default function PixelBrought({
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
         <div
+          className={clsx(bg, "rounded-sm")}
           style={{
             width: `${20 * columns}px`,
             height: `${20 * rows}px`,

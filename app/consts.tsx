@@ -7,6 +7,7 @@ export const BRANDS: Array<{
   pixels?: number[];
   rows?: number;
   columns?: number;
+  bg?: string;
 }> = [
   {
     name: "Elevatte",
@@ -231,9 +232,17 @@ export const BRANDS: Array<{
     name: "AL",
     logo: "/brands/al.webp",
     headline: "Escola de basquete",
-    link: " https://www.instagram.com/al._basquete?igsh=MWd5cmZheG9kdnRqYg==",
+    link: "https://www.instagram.com/al._basquete?igsh=MWd5cmZheG9kdnRqYg==",
     pixel: 30,
-    rows: 1,
-    columns: 1,
+  },
+  {
+    name: "DJ Alan Luck",
+    logo: "/brands/djalanluck.webp",
+    headline: "DJ Profissional & Produtor de Eventos 🔈🎶🎧",
+    link: "https://www.instagram.com/djalanluck",
+    pixel: 31,
+    rows: 2,
+    columns: 5,
+    bg: "bg-black"
   }
 ];
