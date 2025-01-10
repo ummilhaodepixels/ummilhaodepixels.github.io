@@ -2,23 +2,25 @@ import clsx from "clsx";
 import { useState } from "react";
 import Image from "next/image";
 
+interface PixelBroughtProps {
+  name: string;
+  link: string;
+  logo: string;
+  headline: string;
+  rows?: number;
+  columns?: number;
+  bg?: string;
+}
+
 export default function PixelBrought({
   name,
   link,
   logo,
   headline,
-  rows,
-  columns,
+  rows = 1,
+  columns = 1,
   bg
-}: {
-  name: string;
-  link: string;
-  logo: string;
-  headline: string;
-  rows: number;
-  columns: number;
-  bg: string;
-}) {
+}: PixelBroughtProps) {
   const [showTip, setShowTip] = useState(false);
 
   return (
@@ -43,7 +45,7 @@ export default function PixelBrought({
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
         <div
-          className={clsx(bg, "rounded-sm")}
+          className={clsx(bg, "rounded-md")}
           style={{
             width: `${20 * columns}px`,
             height: `${20 * rows}px`,

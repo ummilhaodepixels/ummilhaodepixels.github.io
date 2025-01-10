@@ -60,8 +60,6 @@ export default function PixelGrid() {
           <PixelBrought
             key={i}
             {...brand}
-            rows={brand.rows ?? 1}
-            columns={brand.columns ?? 1}
           />
         );
       } else {
