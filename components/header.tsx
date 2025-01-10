@@ -20,7 +20,7 @@ export default function Header() {
         rel="noopener noreferrer"
         className="bg-slate-900 text-white font-bold text-sm px-6 py-4 w-full text-center md:w-48 rounded-lg shadow-md hover:bg-slate-700"
       >
-        Quero Anunciar
+        Quero Divulgar 📢
       </a>
     </header>
   );
