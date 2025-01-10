@@ -251,5 +251,14 @@ export const BRANDS: Array<{
     headline: "Yoga Surf 🧘🏻🏄🏼",
     link: "https://www.instagram.com/volpi.cafe",
     pixel: 32
+  },
+  {
+  name: "shininja96",
+    logo: "/brands/shininja96.webp",
+    headline: "Streamer",
+    link: "https://twitch.tv/shininja96",
+    pixel: 33,
+    rows: 3,
+    columns: 3
   }
 ];

@@ -35,7 +35,7 @@ export default function PixelBrought({
     >
       <div
         className={clsx(
-          "absolute top-6 bg-black border text-white border-slate-50 rounded-md shadow-lg z-10",
+          "absolute top-6 bg-black border text-white border-slate-50 rounded-sm shadow-lg z-10",
           { block: showTip, hidden: !showTip }
         )}
       >
@@ -51,7 +51,7 @@ export default function PixelBrought({
             height: `${20 * rows}px`,
           }}
         >
-          <Image src={logo} alt={headline} fill className="object-contain" />
+          <Image src={logo} alt={headline} fill className="object-contain rounded-sm" />
         </div>
       </a>
     </div>
