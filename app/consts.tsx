@@ -227,4 +227,13 @@ export const BRANDS: Array<{
     rows: 10,
     columns: 10,
   },
+  {
+    name: "AL",
+    logo: "/brands/al.webp",
+    headline: "Escola de basquete",
+    link: " https://www.instagram.com/al._basquete?igsh=MWd5cmZheG9kdnRqYg==",
+    pixel: 30,
+    rows: 1,
+    columns: 1,
+  }
 ];
