@@ -13,7 +13,7 @@ export const BRANDS: Array<{
     name: "Elevatte",
     logo: "/brands/elevatte.webp",
     headline: "Você no controle da sua carreira",
-    link: "https://elevatte.me",
+    link: "https://elevatte.me?utm_source=ummilhaodepixels&utm_campaign=ummilhaodepixels",
     pixel: 0,
   },
   {
