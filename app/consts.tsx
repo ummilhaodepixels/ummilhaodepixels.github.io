@@ -244,5 +244,12 @@ export const BRANDS: Array<{
     rows: 2,
     columns: 5,
     bg: "bg-black"
+  },
+  {
+    name: "Amanda & Gustavo",
+    logo: "/brands/amandagustavo.webp",
+    headline: "Yoga Surf 🧘🏻🏄🏼",
+    link: "https://www.instagram.com/volpi.cafe",
+    pixel: 32
   }
 ];
