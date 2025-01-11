@@ -292,5 +292,14 @@ export const BRANDS: Array<{
     pixel: 37,
     rows: 4,
     columns: 4
+  },
+  {
+    name: "Adria & José | Renda Nas Ruas💰",
+    logo: "/brands/adriajose.jpg",
+    headline: "💥Fazemos das ruas nossa liberdade financeira💰",
+    link: "https://kiwify.app/Tnvfm7v",
+    pixel: 38,
+    rows: 4,
+    columns: 3
   }
 ];
