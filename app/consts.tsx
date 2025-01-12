@@ -301,5 +301,19 @@ export const BRANDS: Array<{
     pixel: 38,
     rows: 4,
     columns: 3
+  },
+  {
+    name: "Indrig Caroline | Vendedora Ambulante 🚀",
+    logo: "/brands/vededoraambulante.png",
+    headline: "Jovem, alguns doces e um sonho",
+    link: "https://www.instagram.com/vendedoraambulantee/",
+    pixel: 39,
+  },
+  {
+    name: "Indrig Kelly | Sagrada Salada",
+    logo: "/brands/saladasagrada.png",
+    headline: "🍉 Frutas frescas selecionadas com amor",
+    link: "https://www.instagram.com/sagradasalada.ofc",
+    pixel: 40,
   }
 ];
