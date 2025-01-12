@@ -304,7 +304,7 @@ export const BRANDS: Array<{
   },
   {
     name: "Indrig Caroline | Vendedora Ambulante 🚀",
-    logo: "/brands/vededoraambulante.png",
+    logo: "/brands/vendedoraaambulantee.png",
     headline: "Jovem, alguns doces e um sonho",
     link: "https://www.instagram.com/vendedoraambulantee/",
     pixel: 39,
