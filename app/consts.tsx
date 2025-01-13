@@ -328,6 +328,8 @@ export const BRANDS: Array<{
     logo: "/brands/mimopvh.jpeg",
     headline: "Personalizamos lindos mimos para você encantar os seus clientes.",
     link: "https://instagram.com/mimo_pvh",
-    pixel: 42
+    pixel: 42,
+    rows: 2,
+    columns: 5
   }
 ];
