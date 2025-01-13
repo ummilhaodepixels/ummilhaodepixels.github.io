@@ -315,5 +315,12 @@ export const BRANDS: Array<{
     headline: "🍉 Frutas frescas selecionadas com amor",
     link: "https://www.instagram.com/sagradasalada.ofc",
     pixel: 40,
+  },
+  {
+    name: "Banda Neymos",
+    logo: "/brands/bandaneymos.png",
+    headline: "18/01 , Shelter, Porto Velho RO",
+    link: "https://instagram.com/bandaneymos",
+    pixel: 41
   }
 ];
