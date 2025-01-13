@@ -330,6 +330,7 @@ export const BRANDS: Array<{
     link: "https://instagram.com/mimo_pvh",
     pixel: 42,
     rows: 2,
-    columns: 5
+    columns: 5,
+    bg: "bg-[#FF9554]"
   }
 ];
