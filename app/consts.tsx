@@ -322,5 +322,12 @@ export const BRANDS: Array<{
     headline: "18/01 , Shelter, Porto Velho RO",
     link: "https://instagram.com/bandaneymos",
     pixel: 41
+  },
+  {
+    name: "Mimo PVH",
+    logo: "/brands/mimopvh.jpeg",
+    headline: "Personalizamos lindos mimos para você encantar os seus clientes.",
+    link: "https://instagram.com/mimo_pvh",
+    pixel: 42
   }
 ];
