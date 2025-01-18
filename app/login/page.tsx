@@ -19,12 +19,14 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      await login(email, password);
+    setError("");
+
+    const result = await login(email, password);
+
+    if (!result.success) {
+      setError(result.message || "Ocorreu um erro inesperado.");
+    }else {
       router.push("/dashboard");
-    } catch (err) {
-      console.error(err);
-      setError("Credenciais inválidas");
     }
   };
 

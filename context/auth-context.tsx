@@ -11,7 +11,7 @@ type User = {
 
 type AuthContextType = {
   user: User | null;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<{ success: boolean; message?: string }>;
   logout: () => void;
   isAuthenticated: boolean;
   isLoading: boolean;
@@ -24,21 +24,31 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
 
   const login = async (email: string, password: string) => {
-    // codar local use a url: http://localhost:3001/auth/login
-    const res = await fetch("https://api-fc6m.onrender.com/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
+    try {
+      // codar local use a url: http://localhost:3001/auth/login
+      const res = await fetch("https://api-fc6m.onrender.com/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-    if (!res.ok) {
-      const errorData = await res.json();
-      throw new Error(errorData.message || "Login failed");
+      if (res.status === 401) {
+        return { success: false, message: "Credenciais inválidas" };
+      }
+
+      if (!res.ok) {
+        return { success: false, message: "Falha ao conectar. Tente novamente mais tarde." };
+      }
+
+      const data = await res.json();
+      localStorage.setItem("token", data.token);
+      setUser(data.user);
+
+      return { success: true };
+    } catch (error) {
+      console.error("Erro no login:", error);
+      return { success: false, message: "Erro inesperado. Tente novamente." };
     }
-
-    const data = await res.json();
-    localStorage.setItem("token", data.token);
-    setUser(data.user);
   };
 
   const logout = () => {
@@ -55,9 +65,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       try {
         const decoded: { exp: number; email: string } = jwtDecode(token);
 
-        // Verifica se o token expirou
         if (decoded.exp * 1000 < Date.now()) {
-          logout(); // Token expirado, faz logout
+          logout();
         } else {
           setUser({ id: 1, email: decoded.email, name: "Admin" });
         }
