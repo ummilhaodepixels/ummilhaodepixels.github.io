@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics, MicrosoftClarity } from "@/components/tracking";
+import { AuthProvider } from "@/context/auth-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,8 @@ export const metadata: Metadata = {
   description: "A vitrine publicitária mais barata do Brasil 🇧🇷",
   keywords: "Publicidade, Marketing, Branding",
   openGraph: {
-    images: 'https://ummilhaodepixels.com.br/meta.png'
-  }
+    images: "https://ummilhaodepixels.com.br/meta.png",
+  },
 };
 
 export default function RootLayout({
@@ -34,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
