@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import CreteImageForm from "@/components/dashboard/create-image-form";
 
 export default function DashboardPage() {
-  const { user, isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
@@ -31,7 +31,5 @@ export default function DashboardPage() {
     );
   }
 
-  return (
-    <CreteImageForm />
-  );
+  return <CreteImageForm />;
 }
