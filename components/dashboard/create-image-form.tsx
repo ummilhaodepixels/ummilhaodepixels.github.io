@@ -9,9 +9,11 @@ interface FormData {
   rows: number | "";
   columns: number | "";
   type: "regular" | "special";
-  templateHeaderTitle: string;
-  templateHeaderEmoji: string;
-  image: File | null;
+  template: {
+    headerEmoji?: string | "";
+    headerTitle: string;
+  };
+  logo: File | null;
 }
 
 export default function CreteImageForm() {
@@ -21,13 +23,15 @@ export default function CreteImageForm() {
     name: "",
     headline: "",
     link: "",
+    type: "regular",
     pixel: "",
     rows: "",
     columns: "",
-    type: "regular",
-    templateHeaderTitle: "",
-    templateHeaderEmoji: "",
-    image: null,
+    template: {
+      headerTitle: "",
+      headerEmoji: "",
+    },
+    logo: null,
   });
 
   const handleChange = (
@@ -42,6 +46,26 @@ export default function CreteImageForm() {
         [name]: type === "number" ? Number(value) || "" : value,
       }));
     }
+  };
+
+  const handleTemplateTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFormData((prev) => ({
+      ...prev,
+      template: {
+        ...prev.template,
+        headerTitle: e.target.value,
+      },
+    }));
+  };
+
+  const handleTemplateEmojiChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFormData((prev) => ({
+      ...prev,
+      template: {
+        ...prev.template,
+        headerEmoji: e.target.value,
+      },
+    }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -80,7 +104,13 @@ export default function CreteImageForm() {
     const data = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
       if (value !== null) {
-        data.append(key, value);
+        if (typeof value === "object" && !(value instanceof File)) {
+          Object.entries(value).forEach(([subkey, subvalue]) => {
+            data.append(`${key}[${subkey}]`, subvalue as string);
+          });
+        } else {
+          data.append(key, value);
+        }
       }
     });
 
@@ -224,9 +254,9 @@ export default function CreteImageForm() {
           </label>
           <input
             type="text"
-            name="templateHeaderTitle"
-            value={formData.templateHeaderTitle}
-            onChange={handleChange}
+            name="template[headerTitle]"
+            value={formData.template.headerTitle}
+            onChange={handleTemplateTitleChange}
             required
             className="w-full border border-gray-300 rounded-lg shadow-sm p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
@@ -238,9 +268,9 @@ export default function CreteImageForm() {
           </label>
           <input
             type="text"
-            name="templateHeaderEmoji"
-            value={formData.templateHeaderEmoji}
-            onChange={handleChange}
+            name="template[headerEmoji]"
+            value={formData.template.headerEmoji}
+            onChange={handleTemplateEmojiChange}
             className="w-full border border-gray-300 rounded-lg shadow-sm p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
@@ -251,7 +281,7 @@ export default function CreteImageForm() {
           </label>
           <input
             type="file"
-            name="image"
+            name="logo"
             accept="image/*"
             onChange={handleChange}
             required

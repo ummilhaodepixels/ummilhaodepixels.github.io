@@ -5,7 +5,7 @@ import Image from "next/image";
 interface PixelBroughtProps {
   name: string;
   link: string;
-  logo: string;
+  logoPath: string;
   headline: string;
   rows?: number;
   columns?: number;
@@ -15,11 +15,11 @@ interface PixelBroughtProps {
 export default function PixelBrought({
   name,
   link,
-  logo,
+  logoPath,
   headline,
   rows = 1,
   columns = 1,
-  bg
+  bg,
 }: PixelBroughtProps) {
   const [showTip, setShowTip] = useState(false);
 
@@ -51,7 +51,12 @@ export default function PixelBrought({
             height: `${20 * rows}px`,
           }}
         >
-          <Image src={logo} alt={headline} fill className="object-contain rounded-sm" />
+          <Image
+            src={logoPath}
+            alt={headline}
+            fill
+            className="object-contain rounded-sm"
+          />
         </div>
       </a>
     </div>
