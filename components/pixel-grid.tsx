@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { BRANDS } from "@/app/consts";
+import BRANDS from "@/app/brands.json";
 import PixelBrought from "./pixel-brought";
 import PixelEmpty from "./pixel-empty";
 
@@ -56,12 +56,7 @@ export default function PixelGrid() {
     (_, i) => {
       const brand = BRANDS.find((brand) => brand.pixel === i);
       if (brand) {
-        return (
-          <PixelBrought
-            key={i}
-            {...brand}
-          />
-        );
+        return <PixelBrought key={i} {...brand} />;
       } else {
         return <PixelEmpty key={i} />;
       }
