@@ -57,16 +57,13 @@ export default function CreteImageForm() {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/brands`,
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          body: data,
-        }
-      );
+      const response = await fetch(`https://api-fc6m.onrender.com/brands`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: data,
+      });
 
       if (!response.ok) {
         alert("Failed to submit form");
@@ -91,7 +88,7 @@ export default function CreteImageForm() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/brands/preview-publication-image`,
+        `https://api-fc6m.onrender.com/brands/preview-publication-image`,
         {
           method: "POST",
           headers: {

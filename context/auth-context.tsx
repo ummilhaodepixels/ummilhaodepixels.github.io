@@ -11,7 +11,10 @@ type User = {
 
 type AuthContextType = {
   user: User | null;
-  login: (email: string, password: string) => Promise<{ success: boolean; message?: string }>;
+  login: (
+    email: string,
+    password: string
+  ) => Promise<{ success: boolean; message?: string }>;
   logout: () => void;
   isAuthenticated: boolean;
   isLoading: boolean;
@@ -25,7 +28,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = async (email: string, password: string) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, {
+      const res = await fetch(`https://api-fc6m.onrender.com/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -36,7 +39,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       if (!res.ok) {
-        return { success: false, message: "Falha ao conectar. Tente novamente mais tarde." };
+        return {
+          success: false,
+          message: "Falha ao conectar. Tente novamente mais tarde.",
+        };
       }
 
       const data = await res.json();
@@ -79,7 +85,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated, isLoading }}>
+    <AuthContext.Provider
+      value={{ user, login, logout, isAuthenticated, isLoading }}
+    >
       {children}
     </AuthContext.Provider>
   );
