@@ -1,3 +1,3 @@
 export default function DashboardPage() {
-  return <></>;
+  return <>{process.env.NEXT_PUBLIC_API_URL}</>;
 }

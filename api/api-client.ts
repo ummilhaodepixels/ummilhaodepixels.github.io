@@ -1,5 +1,5 @@
 async function fetchWithToken(url: string, options: RequestInit = {}) {
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+  const baseUrl = "https://api-fc6m.onrender.com";
   const token = localStorage.getItem("token");
 
   const response = await fetch(`${baseUrl}${url}`, {

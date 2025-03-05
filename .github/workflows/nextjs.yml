@@ -48,6 +48,9 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: Debug environment variables
+        run: |
+          echo "NEXT_PUBLIC_API_URL=${{ vars.NEXT_PUBLIC_API_URL }}"
       - name: Set environment variables
         run: |
           echo "NEXT_PUBLIC_API_URL=${{ vars.NEXT_PUBLIC_API_URL }}" >> $GITHUB_ENV
