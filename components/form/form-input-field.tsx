@@ -4,6 +4,7 @@ import {
   FormLabel,
   FormControl,
   FormMessage,
+  FormDescription,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
@@ -12,6 +13,7 @@ type InputFieldProps = React.ComponentProps<"input"> & {
   control: Control<any>;
   name: string;
   label: string;
+  description?: string | (() => React.ReactNode);
 };
 
 export const FormInputField = ({
@@ -33,6 +35,13 @@ export const FormInputField = ({
         <FormControl>
           <Input {...field} type={type} {...props} />
         </FormControl>
+        {props.description && (
+          <FormDescription>
+            {typeof props.description === "string"
+              ? props.description
+              : props.description()}
+          </FormDescription>
+        )}
         <FormMessage />
       </FormItem>
     )}

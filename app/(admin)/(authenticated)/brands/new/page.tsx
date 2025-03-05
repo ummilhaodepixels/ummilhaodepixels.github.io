@@ -230,6 +230,18 @@ export default function NewBrandPage() {
                 control={form.control}
                 name="template.headerEmoji"
                 label="Emoji no template"
+                description={() => (
+                  <span>
+                    Fonte utilizada nos emojis:{" "}
+                    <a
+                      className="underline hover:opacity-50"
+                      href="https://fonts.google.com/noto/specimen/Noto+Color+Emoji"
+                      target="_blank"
+                    >
+                      Noto Color Emoji
+                    </a>
+                  </span>
+                )}
               />
 
               <FormFileField
