@@ -317,5 +317,14 @@
     "rows": 2,
     "columns": 5,
     "bg": "bg-[#FF9554]"
+  },
+  {
+    "name": "STEM",
+    "logoPath": "/brands/stem.jpeg",
+    "headline": "Conheça o Projeto S.T.E.M.!",
+    "link": "https://instagram.com/@projetostem.unir",
+    "pixel": 43,
+    "rows": 1,
+    "columns": 1
   }
 ]
