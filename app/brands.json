@@ -326,5 +326,19 @@
     "pixel": 43,
     "rows": 1,
     "columns": 1
+  },
+  {
+    "name": "Carolina Carvalho",
+    "headline": "Feliz Aniversário",
+    "link": "https://www.instagram.com/_its_carol05/",
+    "pixel": 76,
+    "rows": 1,
+    "columns": 1,
+    "type": "regular",
+    "template": {
+      "headerEmoji": "🎂",
+      "headerTitle": "Aniversário"
+    },
+    "logoPath": "/brands/carolina-carvalho/resized.webp"
   }
 ]
