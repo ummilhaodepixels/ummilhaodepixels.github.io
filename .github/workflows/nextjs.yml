@@ -24,9 +24,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
-
 jobs:
   # Build job
   build:
@@ -51,6 +48,9 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: Set environment variables
+        run: |
+          echo "NEXT_PUBLIC_API_URL=${{ env.NEXT_PUBLIC_API_URL }}" >> $GITHUB_ENV
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
